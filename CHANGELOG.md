@@ -1,6 +1,186 @@
 # Changelog
 
 --------------------------------------------
+[0.9.38] - 2023-08-11
+
+* [Android] fix: Expose helper to clearCommunicationDevice on AudioManager.AUDIOFOCUS_LOSS/
+* [Android] feat: support force SW codec list for android, and disable HW codec for VP9 by default.
+* [Android] fix: issue for audio device switch (#1417)
+* [Android/iOS] feat: Added setZoom method to support camera zooming while streaming. (#1412).
+
+[0.9.37] - 2023-08-07
+
+* [Native] fix: Skip set_sdp_fmtp_line if sdpFmtpLine is empty.
+* [Android] fix: fix android earpiece not being replaced after wired headset is disconnected.
+* [Dart] fix: partially rebuild RTCVideoView when renderVideo value changes.
+* [Android] feat: expose android audio modes.
+* [Android] feat: support forceSWCodec for Android.
+* [Linux] fix: add $ORIGIN to rpath.
+
+[0.9.36] - 2023-07-13
+
+* [Native] upgrade libwebrtc to m114.5735.02.
+* [Windows/Linux] Add implementation to MediaStreamTrack.captureFrame() for linux/windows.
+* [Darwin/Android] Support to ignore network adapters used for ICE on Android, iOS and macOS.
+
+[0.9.35] - 2023-06-30
+
+* [iOS] feat: expose audio mode for ios.
+* [Darwin] fix: compiler warning for Darwin.
+* [Dart] Fix setMicrophoneMute() not awaitable.
+* [Native] Update libwebrtc to m114.
+* [Dart/Web] Separate frame cryptor to dart-webrtc.
+
+[0.9.34] - 2023-06-14
+
+* [Web] fix facingMode for flutter web mobile.
+
+[0.9.33] - 2023-06-08
+
+* [Android] fix frame drops for android.
+
+[0.9.32] - 2023-05-30
+
+* [Android] fix issue for get user audio.
+* [Android] fix getStats throw LinkedHasMap exception.
+
+[0.9.31] - 2023-05-23
+
+* [Darwin] Improve iOS/macOS H264 encoder (Upgrade to WebRTC-SDK M104.5112.17).
+
+[0.9.30+hotfix.2] - 2023-05-18
+
+* [Windows/Linux] fix bug for eventchannel proxy.
+* [Windows/Linux] fix: crash for pc.close/dispose on win/linux. (#1360)
+
+[0.9.30+hotfix.1] - 2023-05-17
+
+* [Windows/Linux] Fix compiler error.
+
+[0.9.30] - 2023-05-16
+
+* [Darwin] Handle exceptions for frame rate settings for darinw. (#1351)
+* [Android] Fix bluetooth device enumerate. (#1349)
+* [Darwin/Android/Windows/Linux] Added maxIPv6Networks configuration (#1350)
+* [iOS] Fix: broadcast extension not found fallback logic (#1347)
+* [Android] Move the call of capturer.stopCapture() outside the main thread to avoid blocking of flutter method call.
+* [Windows/Linux] Fix the crash issue of video room (#1343)
+
+[0.9.29+hotfix.1] - 2023-05-08
+
+* [Android] fix: application context null when app is terminated.
+* [Android/iOS] feat: add way to enable speaker but prefer bluetooth.
+
+[0.9.28] - 2023-05-08
+
+* [Windows/Linux] fix: use the correct transceiver id.
+* [Windows/Linux] fix: Support restart camera for Windows/Linux.
+
+[0.9.27] - 2023-04-27
+
+* [Darwin/Android/Windows/Linux] feat: framecryptor.
+* [Windows/Linux] Fix the type/code mistake.
+* [Windows/Linux] Fix uneffective RTPTransceiver::GetCurrentDirection.
+* [Windows/Linux] RTPtransceiver::getCurrentDirection returns correct value.
+
+[0.9.26] - 2023-04-16
+
+* [iOS/macOS] motify h264 profile-level-id to support high resolution.
+* [Dawrin/Android/Windows] feat: add RTCDegradationPreference to RTCRtpParameters.
+
+[0.9.25] - 2023-04-10
+
+* [Dawrin/Android/Windows] Add  `addStreams` to `RTCRtpSender`
+* [Android] fix: label for Wired Headset. (#1305)
+* [Dawrin/Android/Windows] Feat/media stream track get settings (#1294)
+* [Android/iOS] Fix track lookup in the platform specific code for Android and iOS (#1289)
+* [iOS] fix: ICE Connectivity doesn't establish with DualSIM iPhones.
+* [Android] Switch to webrtc hosted on maven central (#1288)
+
+[0.9.24] - 2023-03-07
+
+* [iOS] avaudiosession mode changed to AVAudioSessionModeVideoChat (#1285)
+* [macOS] fix memory leak for screen capture.
+
+[0.9.23] - 2023-02-17
+
+* [Windows/Linux] Updated libwebrtc binary for windows/linux to fix two crashes.
+
+[0.9.22] - 2023-02-14
+
+* [iOS] fix: Without any setActive for rtc session, libwebrtc manages the session counter by itself. (#1266)
+* [dart] fix: remove rtpsender.dispose.
+* [web] fix video renderer issue for safari.
+* [macOS] Fixed macOS desktop capture crash with simulcast enabled.
+* [macOS] Fix the crash when setting the fps of the virtual camera.
+
+[0.9.21] - 2023-02-10
+
+* [Web] Fix: RTCRtpParameters.fromJsObject for Firefox.
+* [Web] Add bufferedamountlow.
+* [Android] Fixed frame capturer returning images with wrong colors (#1258).
+* [Windows] bug fix.
+
+[0.9.20] - 2023-02-03
+
+* [Dawrin/Android/Windows] Add getCapabilities/setCodecPreferences methods
+* [Darwin] buffered amount
+* [Linux] Fixed audio device name buffer size
+* [Android] Start audioswitch and only activate it when needed
+* [Darwin] Fix typo which broke GcmCryptoSuites
+
+[0.9.19] - 2023-01-10
+
+* [Dart] Fix getStats: change 'track' to 'trackId' (#1199)
+* [Android] keep the audio switch after stopping (#1202)
+* [Dart] Enhance RTC video view with placeholder builder property (#1206)
+* [Android] Use forked version of audio switch to avoid BLUETOOTH_CONNECT permission (#1218)
+
+[0.9.18] - 2022-12-12
+
+* [Web] Bump dart_webrtc to 1.0.12, Convert iceconnectionstate to connectionstate for Firefox.
+* [Android] Start AudioSwitchManager only when audio track added (fix #1163) (#1196)
+* [iOS] Implement detachFromEngineForRegistrar (#1192)
+* [iOS] Handle Platform Exception on addCandidate (#1190)
+* [Native] Code format with clang-format.
+
+[0.9.17] - 2022-11-28
+
+* [Android] Update android webrtc version to 104.5112.05
+* [iOS] Update WebRTC.xframework version to 104.5112.07
+
+[0.9.16] - 2022-11-14
+
+* [Linux] Fixed compiler error for flutter 3.3.8.
+* [Linux] Remove 32-bit precompiled binaries.
+* [Linux] Supports linux-x64 and linux-arm64.
+
+[0.9.15] - 2022-11-13
+
+* [Linux] Add Linux Support.
+
+[0.9.14] - 2022-11-12
+
+* [iOS] Fix setSpeakerOn has no effect after change AVAudioSession mode to playback.
+
+[0.9.13] - 2022-11-12
+
+* [Dart] Change MediaStream.clone to async.
+* [iOS] Fixed the bug that the mic indicator light was still on when mic recording was stopped.
+* [iOS/macOS/Android/Windows] Allow sdpMLineIndex to be null when addCandidate.
+* [macOS] Frame capture support for MacOS.
+* [Android] Add enableCpuOveruseDetection configuration (#1165).
+* [Android] Update comments (#1164).
+
+[0.9.12] - 2022-11-02
+
+* [iOS] Fixed the problem that iOS earphones and speakers do not switch.
+* [Windows] fix bug for rtpSender->RemoveTrack/pc->getStats.
+* [iOS] Return groupId.
+* [Web] MediaRecorder.startWeb() should expose the timeslice parameter.
+* [iOS] Implement RTCPeerConnectionDelegate didRemoveIceCandidates method.
+* [iOS] fix disposing Broadcast Sharing stream.
+
 [0.9.11] - 2022-10-16
 
 * [iOS] fix audio route/setSpeakerphoneOn issues.
