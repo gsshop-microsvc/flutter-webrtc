@@ -1,9 +1,56 @@
 # Changelog
 
 --------------------------------------------
+[0.9.46] - 2023-10-25
+
+fix: Crop video output size to target settings. (#1472)
+fi: Fix bluetooth sco not stopping after room disconnect (#1475)
+
+[0.9.45] - 2023-09-27
+
+* [iOS/macOS] fix: send message on non-platform thread.
+* [Windows] fix: fix setSrcObj with trackId for Windows.
+* [Windows] fix: fix "unlock of unowned mutex" error when call "captureFrame()" func on windows.
+
+[0.9.44] - 2023-09-25
+
+* [Windows] fix: fix Renderer bug for Windows.
+* [Native] fix: Use independent threads to process frame encryption/decryption
+* [Native] fix: Correct handle SIF frame
+* [Native] fix: Fix a fault tolerance judgment failure
+
+[0.9.43] - 2023-09-20
+
+* [Native] fix: send frame cryptor events from signaling thread.
+* [Native] fix: h264 freeze when using E2EE.
+
+[0.9.42+hotfix.1] - 2023-09-15
+
+* [Windows/Linux] fix: fix cannot start vp8/h264 encoder correctly.
+
+[0.9.42] - 2023-09-15
+
+* [Dart/Native] feat: add more framcryptor api (#1444)
+* [Dart/Native] feat: support scalability mode (#1442)
+* [Android] fix: Turn off audio routing in non communication modes (#1438)
+
+* [Android] feat: Add more control over android audio options.
+
+[0.9.41] - 2023-08-30
+
+* [Android] feat: Add more control over android audio options.
+
+[0.9.40] - 2023-08-16
+
+* [Windows/Linux] fix: nullptr checking for sender/receiver for getStats.
+
+[0.9.39] - 2023-08-14
+
+* [Dart/Native] feat: add async methods for getting pc states.
+
 [0.9.38] - 2023-08-11
 
-* [Android] fix: Expose helper to clearCommunicationDevice on AudioManager.AUDIOFOCUS_LOSS/
+* [Android] fix: Expose helper to clearCommunicationDevice on AudioManager.AUDIOFOCUS_LOSS
 * [Android] feat: support force SW codec list for android, and disable HW codec for VP9 by default.
 * [Android] fix: issue for audio device switch (#1417)
 * [Android/iOS] feat: Added setZoom method to support camera zooming while streaming. (#1412).
