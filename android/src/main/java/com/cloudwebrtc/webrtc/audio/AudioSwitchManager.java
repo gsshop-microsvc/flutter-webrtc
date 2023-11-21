@@ -85,7 +85,7 @@ public class AudioSwitchManager {
      * <br />
      * Note: Manual audio routing may not work appropriately when using non-default values.
      */
-    private int audioStreamType = AudioManager.STREAM_VOICE_CALL;
+    private int audioStreamType = AudioManager.STREAM_MUSIC;
 
     /**
      * The audio attribute usage type to use when requesting audio focus on devices O and beyond.
