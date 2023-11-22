@@ -28,7 +28,8 @@ public class AudioUtils {
                 audioMode = AudioManager.MODE_IN_CALL;
                 break;
             case "inCommunication":
-                audioMode = AudioManager.MODE_IN_COMMUNICATION;
+                // audioMode = AudioManager.MODE_IN_COMMUNICATION;
+                audioMode = AudioManager.STREAM_MUSIC;
                 break;
             case "ringtone":
                 audioMode = AudioManager.MODE_RINGTONE;
@@ -102,7 +103,8 @@ public class AudioUtils {
                 streamType = AudioManager.STREAM_SYSTEM;
                 break;
             case "voiceCall":
-                streamType = AudioManager.STREAM_VOICE_CALL;
+                // streamType = AudioManager.STREAM_VOICE_CALL;
+                streamType = AudioManager.STREAM_MUSIC;
                 break;
             default:
                 Log.w(TAG, "Unknown audio stream type: " + streamTypeString);
@@ -155,7 +157,8 @@ public class AudioUtils {
                 usageType = AudioAttributes.USAGE_UNKNOWN;
                 break;
             case "voiceCommunication":
-                usageType = AudioAttributes.USAGE_VOICE_COMMUNICATION;
+                // usageType = AudioAttributes.USAGE_VOICE_COMMUNICATION;
+                usageType = AudioAttributes.USAGE_MEDIA;
                 break;
             case "voiceCommunicationSignalling":
                 usageType = AudioAttributes.USAGE_VOICE_COMMUNICATION_SIGNALLING;
@@ -187,7 +190,8 @@ public class AudioUtils {
                 contentType = AudioAttributes.CONTENT_TYPE_SONIFICATION;
                 break;
             case "speech":
-                contentType = AudioAttributes.CONTENT_TYPE_SPEECH;
+                // contentType = AudioAttributes.CONTENT_TYPE_SPEECH;
+                contentType = AudioAttributes.CONTENT_TYPE_MUSIC;
                 break;
             case "unknown":
                 contentType = AudioAttributes.CONTENT_TYPE_UNKNOWN;
