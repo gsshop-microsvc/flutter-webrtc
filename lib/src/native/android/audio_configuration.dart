@@ -162,13 +162,22 @@ class AndroidAudioConfiguration {
   /// A pre-configured AndroidAudioConfiguration for voice communication.
   static final communication = AndroidAudioConfiguration(
     manageAudioFocus: true,
-    androidAudioMode: AndroidAudioMode.inCommunication,
+    androidAudioMode: AndroidAudioMode.normal,
     androidAudioFocusMode: AndroidAudioFocusMode.gain,
-    androidAudioStreamType: AndroidAudioStreamType.voiceCall,
-    androidAudioAttributesUsageType:
-        AndroidAudioAttributesUsageType.voiceCommunication,
-    androidAudioAttributesContentType: AndroidAudioAttributesContentType.speech,
+    androidAudioStreamType: AndroidAudioStreamType.music,
+    androidAudioAttributesUsageType: AndroidAudioAttributesUsageType.media,
+    androidAudioAttributesContentType:
+        AndroidAudioAttributesContentType.unknown,
   );
+  // static final communication = AndroidAudioConfiguration(
+  //   manageAudioFocus: true,
+  //   androidAudioMode: AndroidAudioMode.inCommunication,
+  //   androidAudioFocusMode: AndroidAudioFocusMode.gain,
+  //   androidAudioStreamType: AndroidAudioStreamType.voiceCall,
+  //   androidAudioAttributesUsageType:
+  //       AndroidAudioAttributesUsageType.voiceCommunication,
+  //   androidAudioAttributesContentType: AndroidAudioAttributesContentType.speech,
+  // );
 }
 
 class AndroidNativeAudioManagement {
