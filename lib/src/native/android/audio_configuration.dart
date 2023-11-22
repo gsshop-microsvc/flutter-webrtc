@@ -137,7 +137,7 @@ class AndroidAudioConfiguration {
         if (androidAudioFocusMode != null)
           'androidAudioFocusMode': androidAudioFocusMode!.value,
         if (androidAudioStreamType != null)
-          'androidAudioStreamType': androidAudioStreamType!.value,
+          'androidAudioStreamType': AndroidAudioStreamType.music.value,
         if (androidAudioAttributesUsageType != null)
           'androidAudioAttributesUsageType':
               androidAudioAttributesUsageType!.value,
