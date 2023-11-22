@@ -145,8 +145,8 @@ public class AudioSwitchManager {
                 );
                 audioSwitch.setManageAudioFocus(manageAudioFocus);
                 audioSwitch.setFocusMode(focusMode);
-                audioSwitch.setAudioMode(audioMode);
-                audioSwitch.setAudioStreamType(audioStreamType);
+                audioSwitch.setAudioMode(AudioManager.STREAM_MUSIC);
+                audioSwitch.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 audioSwitch.setAudioAttributeContentType(audioAttributeContentType);
                 audioSwitch.setAudioAttributeUsageType(audioAttributeUsageType);
                 audioSwitch.setForceHandleAudioRouting(forceHandleAudioRouting);
