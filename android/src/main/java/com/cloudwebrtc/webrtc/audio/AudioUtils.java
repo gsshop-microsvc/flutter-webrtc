@@ -27,10 +27,10 @@ public class AudioUtils {
             case "inCall":
                 audioMode = AudioManager.MODE_IN_CALL;
                 break;
-            // case "inCommunication":
-            //     // audioMode = AudioManager.MODE_IN_COMMUNICATION;
-            //     audioMode = AudioManager.MODE_CALL_SCREENING;
-            //     break;
+            case "inCommunication":
+                // audioMode = AudioManager.MODE_IN_COMMUNICATION;
+                audioMode = AudioManager.MODE_NORMAL;
+                break;
             case "ringtone":
                 audioMode = AudioManager.MODE_RINGTONE;
                 break;
@@ -103,10 +103,10 @@ public class AudioUtils {
             case "system":
                 streamType = AudioManager.STREAM_SYSTEM;
                 break;
-            // case "voiceCall":
-            //     // streamType = AudioManager.STREAM_VOICE_CALL;
-            //     streamType = AudioManager.STREAM_MUSIC;
-            //     break;
+            case "voiceCall":
+                // streamType = AudioManager.STREAM_VOICE_CALL;
+                streamType = AudioManager.STREAM_MUSIC;
+                break;
             default:
                 streamType = AudioManager.STREAM_MUSIC;
                 Log.w(TAG, "Unknown audio stream type: " + streamTypeString);
@@ -158,10 +158,10 @@ public class AudioUtils {
             case "unknown":
                 usageType = AudioAttributes.USAGE_UNKNOWN;
                 break;
-            // case "voiceCommunication":
-            //     // usageType = AudioAttributes.USAGE_VOICE_COMMUNICATION;
-            //     usageType = AudioAttributes.USAGE_MEDIA;
-            //     break;
+            case "voiceCommunication":
+                // usageType = AudioAttributes.USAGE_VOICE_COMMUNICATION;
+                usageType = AudioAttributes.USAGE_MEDIA;
+                break;
             case "voiceCommunicationSignalling":
                 usageType = AudioAttributes.USAGE_VOICE_COMMUNICATION_SIGNALLING;
                 break;
