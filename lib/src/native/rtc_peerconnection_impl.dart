@@ -206,7 +206,7 @@ class RTCPeerConnectionNative extends RTCPeerConnection {
         });
 
         var oldTracks = (kind == 'audio')
-            ? stream.getVideoTracks()
+            ? stream.getAudioTracks()
             : stream.getVideoTracks();
         var oldTrack = oldTracks.isNotEmpty ? oldTracks[0] : null;
         if (oldTrack != null) {
