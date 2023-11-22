@@ -97,7 +97,7 @@ public class AudioSwitchManager {
      * <br />
      * Note: Manual audio routing may not work appropriately when using non-default values.
      */
-    private int audioAttributeUsageType = AudioAttributes.USAGE_MEDIA;
+    private int audioAttributeUsageType = AudioAttributes.CONTENT_TYPE_MUSIC;
 
     /**
      * The audio attribute content type to use when requesting audio focus on devices O and beyond.
