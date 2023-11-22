@@ -29,7 +29,7 @@ public class AudioUtils {
                 break;
             case "inCommunication":
                 // audioMode = AudioManager.MODE_IN_COMMUNICATION;
-                audioMode = AudioManager.STREAM_MUSIC;
+                audioMode = AudioManager.MODE_CALL_SCREENING;
                 break;
             case "ringtone":
                 audioMode = AudioManager.MODE_RINGTONE;
